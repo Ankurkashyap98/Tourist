@@ -1,0 +1,32 @@
+# ==============================================================================
+# Trip Departure - Apache URL Rewrite & Clean Routing Configuration
+# Removes .html extensions, redirects index.html to /, enables caching & security
+# ==============================================================================
+
+RewriteEngine On
+RewriteBase /
+
+# 1. Redirect /index.html and /index to root /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index(\.html)?\ HTTP/ [NC]
+RewriteRule ^index(\.html)?$ / [R=301,L]
+
+# 2. Rewrite route folders or extensionless requests to their corresponding .html files
+RewriteRule ^packages/?$ packages.html [NC,L]
+RewriteRule ^about/?$ about.html [NC,L]
+RewriteRule ^contact/?$ contact.html [NC,L]
+
+# 3. Internally rewrite any extensionless requests to .html file if it exists
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# 4. Security Headers & Browser Caching
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# 5. Enable GZIP Compression for Fast Loading
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>

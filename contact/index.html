@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Us – Trip Departure | Jammu Office & 24x7 Helpline</title>
+  <meta name="description"
+    content="Contact Trip Departure, the most trusted travel agency in Jammu. Visit our Shiv Nagar office or call +91 8899544803. Free customized tour planning for Kashmir, Ladakh, Kerala & more.">
+
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%230b192c'/><path d='M50 15 L78 75 L50 62 L22 75 Z' fill='%23ff8e26'/></svg>">
+
+  <base href="/">
+  <script>
+    (function () { try { var p = window.location.pathname; if (p.endsWith('.html')) { var c = p.slice(0, -5); if (c.endsWith('/index') || c === 'index' || c === '/index') c = '/'; window.history.replaceState(null, '', (c || '/') + window.location.search + window.location.hash); } else if (p.length > 1 && p.endsWith('/')) { window.history.replaceState(null, '', p.slice(0, -1) + window.location.search + window.location.hash); } } catch (e) { } })();
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+
+  <style>
+    .contact-hero {
+      background: linear-gradient(135deg, rgba(11, 25, 44, 0.94) 0%, rgba(9, 18, 29, 0.96) 100%),
+        url('https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat;
+      color: #ffffff;
+      padding: 100px 0 80px;
+      text-align: center;
+      position: relative;
+    }
+
+    .contact-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      margin-top: -50px;
+      position: relative;
+      z-index: 20;
+    }
+
+    @media (max-width: 1024px) {
+      .contact-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: -30px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .contact-cards-grid {
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+      }
+    }
+
+    .contact-card-box {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 30px 24px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 15px 35px -5px rgba(11, 25, 44, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: all var(--transition-normal);
+    }
+
+    .contact-card-box:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--accent);
+    }
+
+    .contact-icon-bubble {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-icon-bubble svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .office-map-frame {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-subtle);
+      height: 400px;
+      position: relative;
+    }
+
+    .landmarks-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .landmarks-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .landmark-badge {
+      background: var(--bg-alt);
+      padding: 14px 18px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .landmark-badge strong {
+      color: var(--primary);
+      display: block;
+      font-size: 0.95rem;
+    }
+
+    .landmark-badge span {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    @media (max-width: 800px) {
+      .comparison-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .comparison-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .comparison-card.highlight {
+      border: 2px solid var(--accent);
+      background: linear-gradient(180deg, #ffffff 0%, rgba(255, 142, 38, 0.04) 100%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sticky Main Header (Single Unified Header) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand-logo" aria-label="Trip Departure Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+          </svg>
+        </div>
+        <div class="brand-text">Trip<span>Departure</span></div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="/" class="nav-link">Home</a>
+        <!-- <a href="/packages" class="nav-link">All Packages</a> -->
+        <a href="/packages" class="nav-link">Destinations</a>
+        <a href="/about" class="nav-link">About Us</a>
+        <a href="/contact" class="nav-link active">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+918899544803" class="btn-contact-quick" title="Call Jammu Office">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          <span>+91 8899544803</span>
+        </a>
+        <a href="https://wa.me/918899544803?text=Hi%20Trip%20Departure!%20I%20want%20to%20plan%20a%20vacation."
+          target="_blank" class="btn btn-primary btn-sm btn-shimmer">
+          WhatsApp Chat
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section 1: Hero Banner -->
+  <section class="contact-hero">
+    <div class="container">
+      <span class="badge-tag animate-float-3d"
+        style="background: rgba(255, 142, 38, 0.2); color: var(--accent-gold);">Direct Jammu Head Office</span>
+      <h1 style="font-size: clamp(2.3rem, 4.5vw, 3.5rem); color: #ffffff; margin-bottom: 16px; font-weight: 900;">
+        Let’s Plan Your Holiday In Person <br><span class="text-shimmer-flow">Or Connect Directly</span>
+      </h1>
+      <p style="color: #cbd5e1; max-width: 720px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7;">
+        Located at <strong>322/D Shiv Nagar, Jammu</strong>, our doors are open for every traveler. Speak with our local
+        holiday experts, get custom itineraries designed in 15 minutes, or call us 24x7.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 2: 4-Card Contact Grid -->
+  <section class="container" style="margin-bottom: 60px;">
+    <div class="contact-cards-grid">
+      <!-- Card 1: Office Address -->
+      <div class="contact-card-box card-3d-wrap reveal delay-1">
+        <div class="contact-icon-bubble" style="background: rgba(255, 142, 38, 0.12); color: var(--accent);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+        </div>
+        <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--primary); margin-bottom: 6px;">Jammu Head Office
+        </h4>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 12px;">322/D Shiv
+          Nagar, Jammu, Jammu &amp; Kashmir – 180001, India</p>
+        <span
+          style="font-size: 0.78rem; font-weight: 700; color: #059669; background: rgba(6, 214, 160, 0.12); padding: 3px 8px; border-radius: 4px;">Walk-ins
+          Welcome</span>
+      </div>
+
+      <!-- Card 2: Phone Hotline -->
+      <div class="contact-card-box card-3d-wrap reveal delay-2">
+        <div class="contact-icon-bubble" style="background: rgba(6, 214, 160, 0.12); color: var(--accent-emerald);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+        </div>
+        <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--primary); margin-bottom: 6px;">Calling Helpline
+        </h4>
+        <a href="tel:+918899544803"
+          style="font-size: 1.15rem; font-weight: 800; color: var(--primary); margin-bottom: 8px;">+91 8899544803</a>
+        <p style="color: var(--text-muted); font-size: 0.85rem;">Mon - Sun • 24x7 active assistance during active trips
+        </p>
+      </div>
+
+      <!-- Card 3: WhatsApp Support -->
+      <div class="contact-card-box card-3d-wrap reveal delay-3">
+        <div class="contact-icon-bubble" style="background: rgba(37, 211, 102, 0.14); color: #25d366;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+            </path>
+          </svg>
+        </div>
+        <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--primary); margin-bottom: 6px;">Instant WhatsApp
+        </h4>
+        <a href="https://wa.me/918899544803?text=Hi%20Trip%20Departure!%20Please%20share%20tour%20package%20details."
+          target="_blank" style="font-size: 1.05rem; font-weight: 800; color: #25d366; margin-bottom: 8px;">+91
+          8899544803</a>
+        <p style="color: var(--text-muted); font-size: 0.85rem;">Average response time under 5 minutes</p>
+      </div>
+
+      <!-- Card 4: Official Email Desk -->
+      <div class="contact-card-box card-3d-wrap reveal delay-4">
+        <div class="contact-icon-bubble" style="background: rgba(14, 165, 233, 0.12); color: var(--accent-cyan);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </div>
+        <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--primary); margin-bottom: 6px;">Email &amp; Vouchers
+        </h4>
+        <a href="mailto:contact@tripdeparture.in"
+          style="font-size: 0.95rem; font-weight: 800; color: var(--primary); margin-bottom: 8px;">contact@tripdeparture.in</a>
+        <p style="color: var(--text-muted); font-size: 0.85rem;">For formal quotes, booking receipts &amp; B2B</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Comprehensive Custom Tour Request Form -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 50px; align-items: flex-start;">
+        <!-- Left: Form Card -->
+        <div
+          style="background: #ffffff; border-radius: var(--radius-xl); padding: 44px; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-xl);"
+          class="reveal">
+          <span class="badge-tag tag-cyan">Custom Route Builder</span>
+          <h2 style="font-size: 1.85rem; font-weight: 800; color: var(--primary); margin-bottom: 12px;">
+            Request A Handcrafted Itinerary
+          </h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 28px; line-height: 1.6;">
+            Fill out your holiday expectations. Our Jammu destination manager will curate a custom day-by-day plan with
+            negotiated discounted hotel rates.
+          </p>
+
+          <form id="leadInquiryForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cName">Your Name *</label>
+                <input type="text" id="cName" class="form-control" placeholder="e.g. Vinay Sharma" required>
+              </div>
+              <div class="form-group">
+                <label for="cPhone">WhatsApp / Mobile *</label>
+                <input type="tel" id="cPhone" class="form-control" placeholder="+91 98765 43210" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cEmail">Email Address</label>
+                <input type="email" id="cEmail" class="form-control" placeholder="name@domain.com">
+              </div>
+              <div class="form-group">
+                <label for="cDest">Destination *</label>
+                <select id="cDest" class="form-control" required>
+                  <option value="">Select Destination</option>
+                  <option value="Kashmir">Kashmir (Srinagar, Gulmarg, Pahalgam)</option>
+                  <option value="Ladakh">Ladakh (Leh, Nubra Valley, Pangong)</option>
+                  <option value="Himachal">Himachal (Manali, Shimla, Spiti)</option>
+                  <option value="Kerala">Kerala (Munnar, Thekkady, Alleppey)</option>
+                  <option value="Rajasthan">Rajasthan (Jaipur, Jodhpur, Udaipur)</option>
+                  <option value="Goa">Goa Beaches &amp; Heritage</option>
+                  <option value="Dubai">Dubai &amp; Desert Safari</option>
+                  <option value="Bali">Bali Tropical Villas</option>
+                  <option value="Other">Multi-Destination Custom Tour</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cTravelers">Travelers Count</label>
+                <select id="cTravelers" class="form-control">
+                  <option value="2 Adults (Couple)">2 Adults (Couple / Honeymoon)</option>
+                  <option value="Family (3-4 Persons)">Family (3-4 Persons)</option>
+                  <option value="Group (5-10 Persons)">Group (5-10 Persons)</option>
+                  <option value="Corporate / Large Group">Large Group (10+ Persons)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="cHotelType">Preferred Stay Category</label>
+                <select id="cHotelType" class="form-control">
+                  <option value="3-Star Deluxe">3-Star Deluxe Clean Stays</option>
+                  <option value="4-Star Premium" selected>4-Star Premium Resorts</option>
+                  <option value="5-Star Luxury">5-Star Luxury &amp; Palaces</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="cDates">Estimated Travel Month or Dates</label>
+              <input type="text" id="cDates" class="form-control" placeholder="e.g. 15th to 22nd May 2026">
+            </div>
+
+            <div class="form-group">
+              <label for="cMessage">Special Requests (Houseboat night, driver preference, etc.)</label>
+              <textarea id="cMessage" class="form-control" rows="3"
+                placeholder="Tell us about food choices, specific places you want to visit, or any surprise plans."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-shimmer"
+              style="width: 100%; padding: 15px; font-size: 1.05rem;">
+              <span>Send My Custom Trip Request</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Office Details & Photos -->
+        <div class="reveal delay-1">
+          <div
+            style="background: linear-gradient(135deg, #0b192c 0%, #1e3e62 100%); border-radius: var(--radius-xl); padding: 40px; color: #ffffff; box-shadow: var(--shadow-lg); margin-bottom: 30px;">
+            <span class="badge-tag" style="background: rgba(255, 142, 38, 0.2); color: var(--accent-gold);">Office
+              Hours</span>
+            <h3 style="color: #ffffff; font-size: 1.4rem; font-weight: 800; margin-bottom: 16px;">
+              Jammu Head Office Timings
+            </h3>
+            <div
+              style="display: flex; flex-direction: column; gap: 12px; font-size: 0.95rem; color: #cbd5e1; margin-bottom: 24px;">
+              <div
+                style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                <span>Monday – Saturday:</span>
+                <strong style="color: #ffffff;">9:00 AM – 8:00 PM</strong>
+              </div>
+              <div
+                style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                <span>Sunday Consultation:</span>
+                <strong style="color: #ffffff;">10:00 AM – 5:00 PM</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; padding-top: 4px;">
+                <span>On-Trip Active Support:</span>
+                <strong style="color: var(--accent-emerald);">24 Hours / 7 Days Live</strong>
+              </div>
+            </div>
+
+            <div
+              style="background: rgba(255,255,255,0.08); padding: 16px 20px; border-radius: var(--radius-md); display: flex; align-items: center; gap: 14px;">
+              <div
+                style="width: 12px; height: 12px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 12px #22c55e;">
+              </div>
+              <div style="font-size: 0.88rem; color: #ffffff; font-weight: 600;">Currently Accepting 2026 Season
+                Bookings</div>
+            </div>
+          </div>
+
+          <!-- High-res photo card -->
+          <div class="card-hover-tilt"
+            style="height: 310px; border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg); position: relative;">
+            <img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=800&q=80"
+              alt="Kashmir Hospitality" style="width: 100%; height: 100%; object-fit: cover;">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(11,25,44,0.9) 100%); display: flex; align-items: flex-end; padding: 24px; color: #ffffff;">
+              <div>
+                <h4 style="font-size: 1.15rem; font-weight: 800; color: #ffffff;">Authentic Himalayan Hospitality</h4>
+                <p style="font-size: 0.85rem; color: #cbd5e1;">Enjoy our signature saffron tea when you drop by our Shiv
+                  Nagar office.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Jammu Head Office Location & Landmarks -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge-tag tag-emerald">Easy To Find</span>
+        <h2 class="section-title">How To Reach Our <span class="text-gradient">Jammu Office</span></h2>
+        <p class="section-subtitle">Conveniently situated in central Jammu, easily accessible from railway station and
+          airport.</p>
+      </div>
+
+      <div class="office-map-frame reveal">
+        <!-- Google Maps Embed Representation for Shiv Nagar, Jammu -->
+        <iframe title="Trip Departure Office Location Jammu"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13418.598276634842!2d74.839847!3d32.726601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391e84ba248109bf%3A0xa19bf9e34e565985!2sShiv%20Nagar%2C%20Jammu!5e0!3m2!1sen!2sin!4v1700000000000"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- Distance and Landmarks -->
+      <div class="landmarks-list reveal delay-1">
+        <div class="landmark-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            style="color: var(--accent); flex-shrink: 0;">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+          <div>
+            <strong>Jammu Tawi Railway Station</strong>
+            <span>Only 4.5 km away (~12 minutes by cab)</span>
+          </div>
+        </div>
+
+        <div class="landmark-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            style="color: var(--accent-emerald); flex-shrink: 0;">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          <div>
+            <strong>Jammu Civil Airport (Satwari)</strong>
+            <span>7.2 km distance (~18 minutes drive)</span>
+          </div>
+        </div>
+
+        <div class="landmark-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            style="color: var(--accent-cyan); flex-shrink: 0;">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <div>
+            <strong>Nearby Landmarks</strong>
+            <span>Subash Nagar, Canal Road &amp; KC Cinema</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Why Book Direct With Jammu Agency vs Big Online Portals -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge-tag">Transparency Guarantee</span>
+        <h2 class="section-title">Why Booking Local With Us <span class="text-gradient">Wins Every Time</span></h2>
+        <p class="section-subtitle">Comparing Trip Departure directly with impersonal corporate travel portals.</p>
+      </div>
+
+      <div class="comparison-grid">
+        <!-- Portal Card -->
+        <div class="comparison-card reveal delay-1">
+          <h3 style="font-size: 1.3rem; font-weight: 800; color: #64748b; margin-bottom: 16px;">
+            Generic Online Aggregators
+          </h3>
+          <ul style="display: flex; flex-direction: column; gap: 14px; color: var(--text-muted); font-size: 0.94rem;">
+            <li style="display: flex; gap: 10px; align-items: flex-start;">
+              <span style="color: #ef4444; font-weight: 800;">✕</span>
+              <span>Rely on faceless call center agents who have never stepped foot on Gulmarg snow or Khardung
+                La.</span>
+            </li>
+            <li style="display: flex; gap: 10px; align-items: flex-start;">
+              <span style="color: #ef4444; font-weight: 800;">✕</span>
+              <span>Charge hidden 18-25% aggregator commissions built secretly into package rates.</span>
+            </li>
+            <li style="display: flex; gap: 10px; align-items: flex-start;">
+              <span style="color: #ef4444; font-weight: 800;">✕</span>
+              <span>Leave you stranded with automated ticket bots when mountain highways close or flights delay.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Trip Departure Card -->
+        <div class="comparison-card highlight reveal delay-2">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--primary);">
+              Trip Departure (Jammu Direct)
+            </h3>
+            <span
+              style="background: var(--accent); color: white; padding: 3px 10px; border-radius: var(--radius-pill); font-size: 0.75rem; font-weight: 800;">Recommended</span>
+          </div>
+          <ul style="display: flex; flex-direction: column; gap: 14px; color: var(--text-main); font-size: 0.94rem;">
+            <li style="display: flex; gap: 10px; align-items: flex-start;">
+              <span style="color: var(--accent-emerald); font-weight: 800;">✓</span>
+              <span><strong>Ground Authority:</strong> We check daily mountain road status and assign our vetted drivers
+                directly.</span>
+            </li>
+            <li style="display: flex; gap: 10px; align-items: flex-start;">
+              <span style="color: var(--accent-emerald); font-weight: 800;">✓</span>
+              <span><strong>Direct Wholesale Rates:</strong> Direct contracts with luxury houseboats and resorts with
+                zero middleman markup.</span>
+            </li>
+            <li style="display: flex; gap: 10px; align-items: flex-start;">
+              <span style="color: var(--accent-emerald); font-weight: 800;">✓</span>
+              <span><strong>Instant Human Action:</strong> If weather changes, our Jammu team calls hotels and swaps
+                dates without extra fees.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Emergency 24x7 Traveler Helpline Banner -->
+  <section class="container" style="margin-bottom: 90px;">
+    <div
+      style="background: linear-gradient(135deg, #0b192c 0%, #060e19 100%); border-radius: var(--radius-xl); padding: 50px; color: #ffffff; box-shadow: var(--shadow-xl); border: 1px solid rgba(255, 142, 38, 0.3);"
+      class="reveal">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px;">
+        <div>
+          <span class="badge-tag" style="background: rgba(37, 211, 102, 0.2); color: #25d366;">Active Travelers On
+            Tour</span>
+          <h3 style="color: #ffffff; font-size: 1.8rem; font-weight: 800; margin-bottom: 8px;">
+            Already On The Road With Us?
+          </h3>
+          <p style="color: #cbd5e1; font-size: 1rem; max-width: 600px;">
+            Our emergency on-ground dispatch team in Jammu is reachable 24 hours a day for live assistance, cab
+            adjustments, or health checks.
+          </p>
+        </div>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="tel:+918899544803" class="btn btn-primary btn-lg btn-shimmer">
+            <span>Call +91 8899544803</span>
+          </a>
+          <a href="https://wa.me/918899544803" target="_blank" class="btn btn-outline-white btn-lg">
+            <span>WhatsApp Emergency Desk</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 20px; color: #ffffff;">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+            </div>
+            <div class="brand-text">Trip<span style="color: var(--accent);">Departure</span></div>
+          </div>
+          <p style="color: #94a3b8; font-size: 0.94rem; line-height: 1.7;">
+            Best travel agency in Jammu providing customized holiday tours across India &amp; international destinations
+            with verified hotels, 24x7 support, and local chauffeur guides.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="/packages?dest=kashmir">Kashmir Tours</a></li>
+            <li><a href="/packages?dest=ladakh">Ladakh Tours</a></li>
+            <li><a href="/packages?dest=himachal">Himachal Pradesh</a></li>
+            <li><a href="/packages?dest=kerala">Kerala Backwaters</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/packages">Packages</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Jammu Office</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>322/D Shiv Nagar, Jammu, J&amp;K – 180001</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <a href="tel:+918899544803" style="color: #cbd5e1;">+91 8899544803</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Trip Departure. All Rights Reserved.</div>
+        <div>Best Travel Agency in Jammu • 322/D Shiv Nagar</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

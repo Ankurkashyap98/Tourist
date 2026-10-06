@@ -1,0 +1,318 @@
+/* ==========================================================================
+   Trip Departure - Dynamic Animations & Micro-Interactions
+   Unique, ultra-smooth keyframes, 3D transforms, rotating elements & fluid motion
+   ========================================================================== */
+
+/* 1. Fluid Floating & 3D Bobbing */
+@keyframes float3D {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translateY(-14px) rotate(1.5deg) scale(1.02);
+  }
+  66% {
+    transform: translateY(-6px) rotate(-1.5deg) scale(0.99);
+  }
+}
+
+@keyframes floatReverse3D {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(14px) rotate(-2deg);
+  }
+}
+
+@keyframes floatSideToSide {
+  0%, 100% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(12px) translateY(-8px);
+  }
+}
+
+/* 2. Ghumne Wale (Rotating Orbit & Compass Animations) */
+@keyframes spinContinuous {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes orbitBadge {
+  0% {
+    transform: rotate(0deg) translateX(45px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(45px) rotate(-360deg);
+  }
+}
+
+/* 3. Peeche Se Aane Wale Animations (Coming From Behind / 3D Depth) */
+@keyframes comeFromBehind {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) translateZ(-150px) translateY(50px) scale(0.85);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) translateZ(0) translateY(0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes zoomPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) rotate(-4deg);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.05) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* 4. Morphing Gradient Blob Background */
+@keyframes morphBlob {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: rotate(0deg) scale(1);
+  }
+  34% {
+    border-radius: 70% 30% 50% 50% / 30% 60% 40% 70%;
+    transform: rotate(120deg) scale(1.08);
+  }
+  67% {
+    border-radius: 40% 60% 70% 30% / 40% 40% 60% 55%;
+    transform: rotate(240deg) scale(0.95);
+  }
+}
+
+/* 5. Glowing Pulses & Rhythms */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 142, 38, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 28px 8px rgba(255, 142, 38, 0.7);
+  }
+}
+
+@keyframes pulseEmeraldGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(6, 214, 160, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px 6px rgba(6, 214, 160, 0.65);
+  }
+}
+
+@keyframes pulseWhatsApp {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.75);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* 6. Text Shimmer & Gradient Flow */
+@keyframes textFlowGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 7. Marquee Infinite Flow */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 8. Light Sweep / Shimmer Button */
+@keyframes shineSweep {
+  0% {
+    left: -120%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+/* ==========================================================================
+   Animation Utility Classes
+   ========================================================================== */
+.animate-float-3d {
+  animation: float3D 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse3D 7s ease-in-out infinite;
+}
+
+.animate-float-side {
+  animation: floatSideToSide 5s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spinContinuous 22s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spinReverse 28s linear infinite;
+}
+
+.animate-blob {
+  animation: morphBlob 14s ease-in-out infinite;
+}
+
+.animate-glow-orange {
+  animation: pulseGlow 2.5s infinite;
+}
+
+.animate-glow-emerald {
+  animation: pulseEmeraldGlow 2.5s infinite;
+}
+
+.animate-pop-in {
+  animation: zoomPopIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Card 3D Perspective Hover */
+.card-3d-wrap {
+  perspective: 1000px;
+  transition: transform var(--transition-normal);
+}
+
+.card-3d-wrap:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.card-hover-tilt {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  will-change: transform;
+}
+
+.card-hover-tilt:hover {
+  transform: translateY(-10px) rotateX(4deg) rotateY(-2deg);
+  box-shadow: 0 25px 50px -12px rgba(11, 25, 44, 0.22);
+}
+
+/* Flowing Text Gradient */
+.text-shimmer-flow {
+  background: linear-gradient(90deg, #ff8e26, #ffbe0b, #06d6a0, #ff8e26);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textFlowGradient 6s ease infinite;
+  display: inline-block;
+}
+
+/* Shimmer Button */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: none;
+}
+
+.btn-shimmer:hover::before {
+  animation: shineSweep 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scroll Reveal (Peeche Se Aane Wala / 3D Depth) */
+.reveal {
+  opacity: 0;
+  transform: perspective(1000px) translateZ(-60px) translateY(40px);
+  filter: blur(4px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: perspective(1000px) translateZ(0) translateY(0);
+  filter: blur(0px);
+}
+
+.delay-1 { transition-delay: 0.12s; }
+.delay-2 { transition-delay: 0.24s; }
+.delay-3 { transition-delay: 0.36s; }
+.delay-4 { transition-delay: 0.48s; }
+
+/* Rotating Star Badge */
+.spinning-badge-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  animation: spinContinuous 12s linear infinite;
+}
+
+/* Pulsing Online Dot */
+.pulse-online {
+  width: 10px;
+  height: 10px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+}
+
+.pulse-online::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  opacity: 0.75;
+  animation: pulseEmeraldGlow 1.8s infinite;
+}
