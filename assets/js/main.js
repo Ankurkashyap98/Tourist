@@ -39,28 +39,23 @@
   }
 })();
 
-// Package Database with itineraries and details
+// Package Database matching Homepage & Document requirements
 const packagesData = [
   {
-    id: 'kashmir-paradise',
-    title: 'Heavenly Kashmir Special: Srinagar, Gulmarg & Pahalgam',
-    category: 'domestic',
-    tags: ['Best Seller', 'Domestic', 'Honeymoon'],
-    destination: 'kashmir',
-    duration: '6 Days / 5 Nights',
+    id: 'kashmir-escape',
+    title: 'Kashmir Valley Escape',
+    category: 'india',
+    destination: 'Kashmir',
+    duration: 'Customizable Itinerary',
     durationVal: 6,
     theme: 'honeymoon',
-    price: 16999,
-    oldPrice: 22500,
+    tags: ['Kashmir', 'India', 'Honeymoon', 'Family'],
+    price: 99,
+    displayPrice: 'From ₹99/-',
     rating: 4.9,
     reviews: 218,
     image: 'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=800&q=80',
-    highlights: [
-      'Luxury Houseboat Stay on Dal Lake with Shikara Ride',
-      'Phase 1 Gondola Cable Car Ride in Snow-clad Gulmarg',
-      'Scenic Drive through Saffron Fields & Betaab Valley, Pahalgam',
-      'Complimentary Kashmiri Kahwa & Traditional Dinner'
-    ],
+    highlights: ['Scenic Stays', 'Sightseeing', 'Private Transfers'],
     itinerary: [
       { day: 'Day 1', title: 'Arrival in Srinagar & Dal Lake Houseboat Experience', desc: 'Warm reception at Srinagar airport. Transfer to premium luxury houseboat. Evening relaxing 1-hour romantic Shikara ride covering floating gardens and Char Chinar.' },
       { day: 'Day 2', title: 'Srinagar to Gulmarg Meadow of Flowers & Gondola Ride', desc: 'Ascend to Gulmarg at 8,825 ft. Enjoy snow activities, world highest golf course and spectacular Gondola cable car ride reaching Apharwat peak.' },
@@ -69,223 +64,188 @@ const packagesData = [
       { day: 'Day 5', title: 'Pahalgam to Srinagar & Mughal Gardens Tour', desc: 'Return to Srinagar. Visit famous UNESCO-notable Mughal marvels: Nishat Bagh, Shalimar Bagh, Chashme Shahi and Shankaracharya Temple.' },
       { day: 'Day 6', title: 'Departure with Sweet Memories', desc: 'Transfer to Srinagar Airport for onward journey with lifetime memories of Kashmir.' }
     ],
-    inclusions: ['5 Nights accommodation (3★/4★ Hotels + 1 Night Deluxe Houseboat)', 'Daily Breakfast & Dinner', 'Private sanitized AC/Heated Cab throughout', 'Toll taxes, parking & fuel charges', '1 Hour Shikara Ride on Dal Lake'],
-    exclusions: ['Airfare / Train tickets', 'Gondola tickets & Pony rides', 'Personal expenses & laundry']
+    inclusions: ['Scenic Stays (Houseboat + Hotels)', 'Sightseeing across Srinagar, Gulmarg & Pahalgam', 'Private Sanitized Transfers', 'Daily Breakfast & Dinner'],
+    exclusions: ['Airfare / Train tickets', 'Personal expenses & Gondola ticket']
   },
   {
-    id: 'kerala-gods-own',
-    title: 'Splendors of Kerala: Munnar, Thekkady & Alleppey Backwaters',
-    category: 'domestic',
-    tags: ['Trending', 'Domestic', 'Honeymoon', 'Family'],
-    destination: 'kerala',
-    duration: '5 Days / 4 Nights',
+    id: 'kerala-backwaters',
+    title: 'Kerala Backwaters & Hills',
+    category: 'india',
+    destination: 'Kerala',
+    duration: 'Customizable Itinerary',
     durationVal: 5,
     theme: 'family',
-    price: 14499,
-    oldPrice: 19800,
+    tags: ['Kerala', 'India', 'Honeymoon', 'Family'],
+    price: 99,
+    displayPrice: 'From ₹99/-',
     rating: 4.8,
     reviews: 184,
     image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80',
-    highlights: [
-      'Private Houseboat Cruise with Authentic Kerala Meals',
-      'Munnar Tea Garden Valleys & Eravikulam National Park',
-      'Spice Plantation Walk & Elephant Safari in Thekkady',
-      'Kathakali & Kalaripayattu Cultural Show Ticket Included'
-    ],
+    highlights: ['Backwater Experience', 'Hill Station', 'Local Sightseeing'],
     itinerary: [
       { day: 'Day 1', title: 'Cochin Arrival & Transfer to Misty Munnar', desc: 'Arrive at Cochin airport/station. Drive through scenic Cheeyappara & Valara waterfalls. Check in to Munnar resort amidst rolling tea hills.' },
-      { day: 'Day 2', title: 'Munnar Sightseeing: Mattupetty, Tea Museum & Echo Point', desc: 'Explore Eravikulam National Park (home to Nilgiri Tahr), Tea Museum, Photo Point, and boating in Mattupetty reservoir.' },
-      { day: 'Day 3', title: 'Munnar to Thekkady Periyar Wildlife Sanctuary', desc: 'Scenic mountain transfer to Thekkady. Afternoon boat safari on Periyar Lake to spot wild elephants. Evening traditional martial arts performance.' },
-      { day: 'Day 4', title: 'Thekkady to Alleppey Houseboat Dream', desc: 'Drive to Alleppey. Board traditional thatched houseboat. Cruise through emerald canals, palm-fringed backwaters and enjoy authentic Kerala sadhya dinner.' },
-      { day: 'Day 5', title: 'Alleppey to Cochin Departure', desc: 'Disembark after breakfast. Visit Fort Kochi heritage streets and Chinese fishing nets before airport transfer.' }
+      { day: 'Day 2', title: 'Munnar Sightseeing: Mattupetty, Tea Museum & Echo Point', desc: 'Explore Eravikulam National Park, Tea Museum, Photo Point, and boating in Mattupetty reservoir.' },
+      { day: 'Day 3', title: 'Munnar to Thekkady Periyar Wildlife Sanctuary', desc: 'Scenic mountain transfer to Thekkady. Afternoon boat safari on Periyar Lake to spot wild elephants.' },
+      { day: 'Day 4', title: 'Thekkady to Alleppey Houseboat Dream', desc: 'Drive to Alleppey. Board traditional thatched houseboat. Cruise through emerald canals and palm-fringed backwaters.' },
+      { day: 'Day 5', title: 'Alleppey to Cochin Departure', desc: 'Disembark after breakfast. Visit Fort Kochi heritage streets before airport transfer.' }
     ],
-    inclusions: ['4 Nights stay (3 Nights Deluxe Resorts + 1 Night Private Houseboat)', 'All meals in Houseboat + Daily Breakfast in Munnar & Thekkady', 'Dedicated private chauffeur cab', 'Sightseeing as per itinerary'],
-    exclusions: ['Airfare', 'National park safari entrance fees', 'Personal boating expenses']
+    inclusions: ['Curated Hotel & Houseboat Stays', 'Breakfast & Houseboat Meals', 'Dedicated Private Cab', 'Sightseeing as per itinerary'],
+    exclusions: ['Airfare', 'Entry tickets & personal expenses']
   },
   {
-    id: 'ladakh-pangong',
-    title: 'Mystical Ladakh Adventure: Leh, Nubra Valley & Pangong Tso',
-    category: 'domestic',
-    tags: ['Adventure', 'Domestic', 'Popular'],
-    destination: 'ladakh',
-    duration: '7 Days / 6 Nights',
+    id: 'ladakh-mystic',
+    title: 'Mystic Ladakh & Nubra Valley',
+    category: 'india',
+    destination: 'Ladakh',
+    duration: '7 Days • 6 Nights',
     durationVal: 7,
     theme: 'adventure',
-    price: 23999,
-    oldPrice: 31000,
+    tags: ['Ladakh', 'India', 'Adventure'],
+    price: 99,
+    displayPrice: 'From ₹99/-',
     rating: 4.9,
     reviews: 142,
     image: 'https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=800&q=80',
-    highlights: [
-      'Drive across Khardung La (World highest motorable pass)',
-      'Double-humped Bactrian Camel Ride in Hunder Sand Dunes',
-      'Overnight Swiss Luxury Camp stay at Pangong Lake',
-      'Inner Line Permits & Oxygen Cylinder included'
-    ],
+    highlights: ['Pangong Tso', 'Nubra Valley', 'Mountain Experiences'],
     itinerary: [
-      { day: 'Day 1', title: 'Arrival in Leh & Acclimatization', desc: 'Arrive at Leh Kushok Bakula Rimpochee Airport. Rest full day to acclimatize to high altitude. Evening visit to Shanti Stupa for sunset views.' },
-      { day: 'Day 2', title: 'Leh Local: Hall of Fame, Magnetic Hill & Sangam Point', desc: 'Witness the confluence of Indus and Zanskar rivers, gravity-defying Magnetic Hill and Gurudwara Pathar Sahib.' },
-      { day: 'Day 3', title: 'Leh to Nubra Valley via Khardung La Pass', desc: 'Drive over the mighty Khardung La (17,582 ft). Arrive in Nubra valley and experience white sand dunes riding two-humped camels.' },
-      { day: 'Day 4', title: 'Nubra Valley to Pangong Tso via Shyok River', desc: 'Travel along the turquoise Shyok river route to the mesmerizing blue Pangong Lake. Enjoy starry night by campfire in swiss camps.' },
-      { day: 'Day 5', title: 'Pangong to Leh via Chang La Pass', desc: 'Early morning sunrise over Pangong. Return to Leh crossing Chang La pass (17,590 ft). Visit Thiksey Monastery.' },
+      { day: 'Day 1', title: 'Arrival in Leh & Acclimatization', desc: 'Rest full day to acclimatize to high altitude. Evening visit to Shanti Stupa for sunset views.' },
+      { day: 'Day 2', title: 'Leh Local: Magnetic Hill & Sangam Point', desc: 'Witness confluence of Indus and Zanskar rivers, Magnetic Hill and Gurudwara Pathar Sahib.' },
+      { day: 'Day 3', title: 'Leh to Nubra Valley via Khardung La Pass', desc: 'Drive over mighty Khardung La (17,582 ft) into Nubra valley and white sand dunes.' },
+      { day: 'Day 4', title: 'Nubra Valley to Pangong Tso via Shyok River', desc: 'Travel along the turquoise Shyok river route to the mesmerizing blue Pangong Lake.' },
+      { day: 'Day 5', title: 'Pangong to Leh via Chang La Pass', desc: 'Early morning sunrise over Pangong. Return to Leh crossing Chang La pass (17,590 ft).' },
       { day: 'Day 6', title: 'Leh Market Shopping & Leisure', desc: 'Explore Leh Old Bazaar for pashmina shawls, apricots, and Tibetan souvenirs.' },
-      { day: 'Day 7', title: 'Fly back with Himalayan Triumphs', desc: 'Drop off at Leh airport with heroic high-altitude memories.' }
+      { day: 'Day 7', title: 'Fly back with Himalayan Triumphs', desc: 'Drop off at Leh airport with unforgettable memories.' }
     ],
-    inclusions: ['6 Nights stay with heating/camps', 'MAP meal plan (Breakfast & Dinner)', 'Private 4x4 / Scorpio / Innova throughout', 'Inner Line Wildlife & Eco Permits', 'Emergency Oxygen backup'],
+    inclusions: ['6 Nights stay with heating/camps', 'Breakfast & Dinner', 'Private 4x4 / Scorpio / Innova throughout', 'Inner Line Wildlife & Eco Permits'],
     exclusions: ['Flights', 'Rafting charges', 'Camel safari fee']
   },
   {
-    id: 'rajasthan-royals',
-    title: 'Royal Rajasthan Heritage: Jaipur, Jodhpur & Udaipur Lakes',
-    category: 'domestic',
-    tags: ['Culture', 'Domestic', 'Family'],
-    destination: 'rajasthan',
-    duration: '7 Days / 6 Nights',
-    durationVal: 7,
+    id: 'rajasthan-heritage',
+    title: 'Royal Rajasthan Heritage Tour',
+    category: 'india',
+    destination: 'Rajasthan',
+    duration: 'Customizable Itinerary',
+    durationVal: 6,
     theme: 'family',
-    price: 18499,
-    oldPrice: 24999,
+    tags: ['Rajasthan', 'India', 'Family', 'Culture'],
+    price: 99,
+    displayPrice: 'From ₹99/-',
     rating: 4.8,
     reviews: 165,
     image: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80',
-    highlights: [
-      'Amber Fort Elephant/Jeep Ascent & City Palace Jaipur',
-      'Mehrangarh Fort Grand Walk & Blue City Exploration',
-      'Romantic Sunset Boat Ride on Lake Pichola, Udaipur',
-      'Traditional Rajasthani Folk Dance & Royal Feast'
-    ],
+    highlights: ['Forts & Palaces', 'Cultural Experiences', 'Private Sightseeing'],
     itinerary: [
-      { day: 'Day 1', title: 'Pink City Welcome: Jaipur Arrival', desc: 'Check in to heritage hotel. Evening visit to Birla Temple and Chokhi Dhani ethnic resort for authentic cultural immersion.' },
-      { day: 'Day 2', title: 'Jaipur Forts & Palaces Full Day', desc: 'Explore Amber Fort, Jal Mahal, Hawa Mahal (Palace of Winds), and Jantar Mantar observatory.' },
-      { day: 'Day 3', title: 'Jaipur to Sun City Jodhpur via Pushkar', desc: 'Stop at holy Brahma Temple and sacred Pushkar Lake. Arrive in Jodhpur under the shadow of Mehrangarh.' },
-      { day: 'Day 4', title: 'Jodhpur to City of Lakes Udaipur via Ranakpur', desc: 'Visit Mehrangarh Fort and Jaswant Thada marble cenotaph. En route to Udaipur, admire intricate marble carving at Ranakpur Jain Temple.' },
-      { day: 'Day 5', title: 'Udaipur City Palace & Saheliyon-ki-Bari', desc: 'Grand tour of majestic City Palace complex, Jagdish Temple, and garden of maidens. Evening boat ride across Lake Pichola.' },
-      { day: 'Day 6', title: 'Monsoon Palace & Vintage Car Museum', desc: 'Visit Sajjangarh Monsoon Palace overlooking the Aravalli range and the Maharaja Vintage Automobile Collection.' },
-      { day: 'Day 7', title: 'Udaipur Departure', desc: 'Transfer to Udaipur airport/railway station.' }
+      { day: 'Day 1', title: 'Jaipur Arrival & Cultural Welcome', desc: 'Check in to heritage hotel. Evening visit to Birla Temple and Chokhi Dhani ethnic resort.' },
+      { day: 'Day 2', title: 'Jaipur Forts & Palaces Full Day', desc: 'Explore Amber Fort, Jal Mahal, Hawa Mahal and Jantar Mantar observatory.' },
+      { day: 'Day 3', title: 'Jaipur to Jodhpur via Pushkar', desc: 'Stop at sacred Pushkar Lake and arrive in Sun City Jodhpur under Mehrangarh.' },
+      { day: 'Day 4', title: 'Jodhpur to Udaipur via Ranakpur', desc: 'Visit Mehrangarh Fort and Jaswant Thada, then continue to the City of Lakes Udaipur.' },
+      { day: 'Day 5', title: 'Udaipur City Palace & Lake Pichola', desc: 'Grand tour of majestic City Palace complex and evening boat ride across Lake Pichola.' },
+      { day: 'Day 6', title: 'Udaipur Departure', desc: 'Transfer to Udaipur airport/railway station.' }
     ],
-    inclusions: ['6 Nights stay in curated Heritage & 4★ Hotels', 'Daily Royal Buffet Breakfast', 'Private AC Sedan / SUV with experienced chauffeur', 'All monument parking & interstate taxes'],
+    inclusions: ['Curated Heritage & 4★ Stays', 'Daily Royal Buffet Breakfast', 'Private AC Sedan/SUV with chauffeur', 'All monument parking & interstate taxes'],
     exclusions: ['Monument entrance camera fees', 'Lake Pichola boat ticket', 'Air/rail tickets']
   },
   {
-    id: 'dubai-futuristic',
-    title: 'Dazzling Dubai & Desert Safari Extravaganza',
+    id: 'dubai-escape',
+    title: 'Dubai City & Desert Escape',
     category: 'international',
-    tags: ['International', 'Luxury', 'Family'],
-    destination: 'international',
-    duration: '5 Days / 4 Nights',
+    destination: 'Dubai',
+    duration: 'Customizable Itinerary',
     durationVal: 5,
-    theme: 'luxury',
-    price: 36999,
-    oldPrice: 48000,
+    theme: 'family',
+    tags: ['Dubai', 'International', 'Family', 'Adventure'],
+    price: 99,
+    displayPrice: 'From ₹99/-',
     rating: 4.9,
     reviews: 205,
     image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80',
-    highlights: [
-      'Burj Khalifa 124th & 125th Floor Observation Deck Ticket',
-      '4x4 Dune Bashing Desert Safari with BBQ Dinner & Belly Dance',
-      'Luxury Marina Dhow Cruise with International Buffet',
-      'Dubai Mall, Fountain Show & Miracle Garden Tour'
-    ],
+    highlights: ['Desert Safari', 'City Experiences', 'Leisure Time'],
     itinerary: [
       { day: 'Day 1', title: 'Welcome to Dubai & Marina Dhow Cruise', desc: 'Arrive at Dubai International Airport. Luxury transfer to hotel. Evening 5★ Marina Dhow cruise with skyline views.' },
-      { day: 'Day 2', title: 'Dubai City Tour & Burj Khalifa At The Top', desc: 'Visit Dubai Frame, Jumeirah Mosque, Palm Jumeirah, Burj Al Arab photo stop, Dubai Mall and 124th floor of Burj Khalifa.' },
+      { day: 'Day 2', title: 'Dubai City Tour & Burj Khalifa At The Top', desc: 'Visit Dubai Frame, Jumeirah Mosque, Palm Jumeirah, Burj Al Arab photo stop, Dubai Mall and Burj Khalifa observation deck.' },
       { day: 'Day 3', title: 'Red Dune Desert Safari & Bedouin Camp', desc: 'Thrilling 4x4 dune bashing, sandboarding, camel rides, henna painting, fire show and lavish BBQ dinner under the desert stars.' },
-      { day: 'Day 4', title: 'Miracle Garden & Global Village', desc: 'Wander through 150 million blooming flowers in Miracle Garden followed by multicultural pavilions and shopping at Global Village.' },
+      { day: 'Day 4', title: 'Miracle Garden & Leisure Shopping', desc: 'Wander through 150 million blooming flowers in Miracle Garden followed by shopping and leisure time.' },
       { day: 'Day 5', title: 'Gold Souk & Airport Farewell', desc: 'Morning visit to Gold & Spice Souk. Transfer to airport for flight home.' }
     ],
-    inclusions: ['4 Nights stay in 4★ City Hotel with breakfast', 'All airport transfers & tours in AC coaches', 'Burj Khalifa Non-prime hour entrance ticket', 'Desert Safari with VIP camp dinner', 'UAE Tourist Visa & Insurance'],
+    inclusions: ['Curated City Hotel with breakfast', 'All airport transfers & tours in AC coaches', 'Burj Khalifa entrance ticket', 'Desert Safari with BBQ dinner'],
     exclusions: ['Airfare', 'Tourism Dirham fee', 'Personal shopping expenses']
   },
   {
-    id: 'bali-tropical',
-    title: 'Enchanting Bali: Ubud Rainforests, Nusa Penida & Beach Clubs',
-    category: 'international',
-    tags: ['International', 'Honeymoon', 'Trending'],
-    destination: 'international',
-    duration: '6 Days / 5 Nights',
-    durationVal: 6,
-    theme: 'honeymoon',
-    price: 32499,
-    oldPrice: 42999,
-    rating: 4.9,
-    reviews: 178,
-    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80',
-    highlights: [
-      'Private Pool Villa with Floating Breakfast',
-      'Nusa Penida West Island Tour: Kelingking T-Rex Beach & Angel Billabong',
-      'Tegalalang Rice Terraces & Famous Giant Jungle Swing',
-      'Uluwatu Cliff Sunset & Kecak Fire Dance'
-    ],
-    itinerary: [
-      { day: 'Day 1', title: 'Arrival in Bali & Private Villa Check-In', desc: 'Warm Balinese garland welcome at Denpasar Airport. Check into your romantic private pool villa in Seminyak/Ubud.' },
-      { day: 'Day 2', title: 'Ubud Highlights, Jungle Swing & Monkey Forest', desc: 'Visit sacred Monkey Forest, coffee plantation, Tegalalang rice terraces and take incredible photos on the Bali swing.' },
-      { day: 'Day 3', title: 'Nusa Penida Day Cruise & Snorkeling', desc: 'Fast boat to Nusa Penida island. Visit iconic Kelingking Beach, Broken Beach, and Angel Billabong natural infinity pool.' },
-      { day: 'Day 4', title: 'Uluwatu Sunset Temple & Beach Club Vibes', desc: 'Relax at famous Padang Padang beach. Visit cliff-top Uluwatu Temple and witness the magical Kecak Fire Dance at sunset.' },
-      { day: 'Day 5', title: 'Water Sports at Tanjung Benoa & Tanah Lot', desc: 'Banana boat & parasailing fun. Afternoon visit to the offshore Tanah Lot sea temple.' },
-      { day: 'Day 6', title: 'Balinese Spa & Departure', desc: 'Relaxing 1-hour authentic Balinese massage before transfer to airport.' }
-    ],
-    inclusions: ['3 Nights 4★ Resort + 2 Nights Luxury Private Pool Villa', 'Daily Breakfast (1 Floating Breakfast included)', 'Private AC transfers & island speedboat', 'Nusa Penida tour with lunch', 'All entry fees & swing ticket'],
-    exclusions: ['International Flight tickets', 'Visa on Arrival ($35)', 'Personal expenses']
-  },
-  {
-    id: 'himachal-manali-shimla',
-    title: 'Snow & Pines: Shimla, Kullu & Manali Solang Valley',
-    category: 'domestic',
-    tags: ['Domestic', 'Family', 'Adventure'],
-    destination: 'himachal',
-    duration: '6 Days / 5 Nights',
-    durationVal: 6,
-    theme: 'adventure',
-    price: 15499,
-    oldPrice: 20999,
-    rating: 4.8,
-    reviews: 196,
-    image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80',
-    highlights: [
-      'Solang Valley Snow Adventure: Paragliding & Zorbing',
-      'Atal Tunnel & Sissu Lahaul Valley Day Trip',
-      'Hadimba Temple, Vashisht Hot Springs & Mall Road Walks',
-      'Shimla Ridge, Kufri Yak Rides & Christ Church'
-    ],
-    itinerary: [
-      { day: 'Day 1', title: 'Delhi/Chandigarh to Queen of Hills - Shimla', desc: 'Scenic uphill drive to Shimla. Check into hotel. Evening stroll along Mall Road, Scandal Point and The Ridge.' },
-      { day: 'Day 2', title: 'Kufri Snow Excursion & Shimla Heritage', desc: 'Visit Kufri amusement park, Himalayan Wildlife Zoo, and historic Vice Regal Lodge in Shimla.' },
-      { day: 'Day 3', title: 'Shimla to Manali via Kullu Valley & Beas River', desc: 'Drive through Kullu valley, Pandoh Dam, and river rafting points. Check in to mountain view resort in Manali.' },
-      { day: 'Day 4', title: 'Solang Valley & Atal Tunnel Adventure', desc: 'Full day adventure at Solang Valley. Cross the world-record Atal Tunnel into snowy Sissu valley in Lahaul.' },
-      { day: 'Day 5', title: 'Manali Local Sightseeing', desc: 'Visit ancient Hadimba Devi Temple, Tibetan Monastery, Club House, and natural sulphur hot springs in Vashisht.' },
-      { day: 'Day 6', title: 'Manali to Delhi/Chandigarh Departure', desc: 'Scenic descent drive with unforgettable Himalayan memories.' }
-    ],
-    inclusions: ['5 Nights stay in 3★/4★ Mountain Resorts', 'Daily Breakfast & Dinner', 'Private Cab throughout trip (Innova/Dzire)', 'Rohtang Pass/Solang Valley assistance'],
-    exclusions: ['Adventure activities charges', 'Monument tickets', 'Heater charges if applicable']
-  },
-  {
-    id: 'goa-sun-sand',
-    title: 'Vibrant Goa: North Beach Parties & South Heritage Peace',
-    category: 'domestic',
-    tags: ['Domestic', 'Weekend', 'Popular'],
-    destination: 'goa',
-    duration: '4 Days / 3 Nights',
+    id: 'goa-beach',
+    title: 'Goa Beach Holiday',
+    category: 'india',
+    destination: 'Goa',
+    duration: 'Customizable Itinerary',
     durationVal: 4,
-    theme: 'weekend',
-    price: 11999,
-    oldPrice: 16500,
+    theme: 'honeymoon',
+    tags: ['Goa', 'India', 'Honeymoon', 'Adventure'],
+    price: 99,
+    displayPrice: 'From ₹99/-',
     rating: 4.7,
     reviews: 138,
     image: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80',
-    highlights: [
-      'North Goa Famous Beaches: Baga, Calangute & Anjuna',
-      'Aguada Fort & Chapora "Dil Chahta Hai" Fort',
-      'South Goa Old Churches: Basilica of Bom Jesus',
-      'Mandovi River Sunset Cruise with Goan Folk Dance'
-    ],
+    highlights: ['Beaches', 'Coastal Experiences', 'Leisure Time'],
     itinerary: [
       { day: 'Day 1', title: 'Arrival & North Goa Beach Vibes', desc: 'Pick up from Goa airport/station. Check into beach resort. Evening unwind by Calangute beach shacks.' },
       { day: 'Day 2', title: 'North Goa Forts & Water Sports', desc: 'Explore Aguada Fort lighthouse, Chapora Fort, and participate in parasailing & jet skiing at Baga.' },
       { day: 'Day 3', title: 'South Goa Heritage & Mandovi River Cruise', desc: 'Visit UNESCO World Heritage churches in Old Goa, Miramar beach, and evening music sunset cruise on Mandovi river.' },
-      { day: 'Day 4', title: 'Flea Market & Departure', desc: 'Last minute cashew & feni shopping before transfer to airport.' }
+      { day: 'Day 4', title: 'Flea Market & Departure', desc: 'Last minute shopping before transfer to airport.' }
     ],
-    inclusions: ['3 Nights stay in 4★ Resort near Beach', 'Daily Buffet Breakfast', 'Private AC Cab for transfers & full day tours', 'Sunset River Cruise ticket'],
+    inclusions: ['Curated Resort near Beach', 'Daily Buffet Breakfast', 'Private AC Cab for transfers & tours', 'Sunset River Cruise ticket'],
     exclusions: ['Flights', 'Water sports charges', 'Nightclub entries']
+  },
+  {
+    id: 'himachal-escape',
+    title: 'Himachal Mountain Escape',
+    category: 'india',
+    destination: 'Himachal',
+    duration: 'Customizable Itinerary',
+    durationVal: 6,
+    theme: 'adventure',
+    tags: ['Himachal', 'India', 'Family', 'Adventure'],
+    price: 99,
+    displayPrice: 'From ₹99/-',
+    rating: 4.8,
+    reviews: 196,
+    image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80',
+    highlights: ['Mountain Views', 'Scenic Routes', 'Private Cab'],
+    itinerary: [
+      { day: 'Day 1', title: 'Delhi/Chandigarh to Shimla', desc: 'Scenic uphill drive to Shimla. Check into hotel. Evening stroll along Mall Road and The Ridge.' },
+      { day: 'Day 2', title: 'Kufri Snow Excursion & Shimla Heritage', desc: 'Visit Kufri amusement park, Himalayan Wildlife Zoo, and historic Vice Regal Lodge.' },
+      { day: 'Day 3', title: 'Shimla to Manali via Kullu Valley', desc: 'Drive through Kullu valley, Pandoh Dam, and river rafting points. Check in to mountain view resort in Manali.' },
+      { day: 'Day 4', title: 'Solang Valley & Atal Tunnel Adventure', desc: 'Full day adventure at Solang Valley. Cross the world-record Atal Tunnel into snowy Sissu valley.' },
+      { day: 'Day 5', title: 'Manali Local Sightseeing', desc: 'Visit ancient Hadimba Devi Temple, Tibetan Monastery, and natural sulphur hot springs in Vashisht.' },
+      { day: 'Day 6', title: 'Manali to Delhi/Chandigarh Departure', desc: 'Scenic descent drive with unforgettable Himalayan memories.' }
+    ],
+    inclusions: ['Curated Mountain Resorts', 'Daily Breakfast & Dinner', 'Private Cab throughout trip (Innova/Dzire)', 'Solang Valley & Atal Tunnel assistance'],
+    exclusions: ['Adventure activities charges', 'Monument tickets', 'Personal expenses']
+  },
+  {
+    id: 'north-india-discovery',
+    title: 'North India Discovery Tour',
+    category: 'india',
+    destination: 'North India',
+    duration: 'Customizable Itinerary',
+    durationVal: 7,
+    theme: 'family',
+    tags: ['North India', 'India', 'Family', 'Culture'],
+    price: 99,
+    displayPrice: 'From ₹99/-',
+    rating: 4.9,
+    reviews: 172,
+    image: 'https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80',
+    highlights: ['Heritage', 'Mountains', 'Cultural Experiences'],
+    itinerary: [
+      { day: 'Day 1', title: 'Delhi Arrival & Historic Monuments', desc: 'Welcome in Delhi. Explore India Gate, Qutub Minar, and Red Fort before checking into hotel.' },
+      { day: 'Day 2', title: 'Delhi to Agra - The City of Taj', desc: 'Morning drive to Agra. Witness the immortal beauty of the Taj Mahal and Agra Fort.' },
+      { day: 'Day 3', title: 'Agra to Jaipur via Fatehpur Sikri', desc: 'Stop at UNESCO World Heritage city Fatehpur Sikri. Arrive in the Pink City of Jaipur.' },
+      { day: 'Day 4', title: 'Jaipur Palaces & Amber Fort Exploration', desc: 'Explore Amber Fort, Jal Mahal, City Palace, and local bazaar.' },
+      { day: 'Day 5', title: 'Jaipur to Amritsar / Golden Temple Route', desc: 'Journey to holy Amritsar. Witness evening Palki Sahib ceremony at Golden Temple.' },
+      { day: 'Day 6', title: 'Wagah Border & Jallianwala Bagh', desc: 'Pay homage at Jallianwala Bagh and experience patriotic Wagah Border Beating Retreat ceremony.' },
+      { day: 'Day 7', title: 'Departure with Timeless Memories', desc: 'Transfer to airport/railway station for onward journey.' }
+    ],
+    inclusions: ['Curated 4★ Hotels with Breakfast', 'Private AC Cab with experienced chauffeur', 'All interstate tolls and parking charges', 'Monument sightseeing coordination'],
+    exclusions: ['Monument entry tickets', 'Airfare/Train tickets', 'Personal expenses']
   }
 ];
 
@@ -382,7 +342,7 @@ function renderPackages(data) {
     <article class="package-card card-3d-wrap card-hover-tilt reveal delay-${(idx % 3) + 1}" data-category="${pkg.category}" data-id="${pkg.id}">
       <div class="card-media">
         <img src="${pkg.image}" alt="${pkg.title}" loading="lazy">
-        <span class="card-badge-top ${pkg.tags.includes('Best Seller') ? 'badge-deal' : ''}">${pkg.tags[0]}</span>
+        <span class="card-badge-top ${pkg.tags.includes('Best Seller') ? 'badge-deal' : ''}">${pkg.destination.toUpperCase()}</span>
         <div class="card-duration-chip">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           ${pkg.duration}
@@ -394,13 +354,9 @@ function renderPackages(data) {
           ${pkg.destination.toUpperCase()}
         </div>
         <h3 class="card-title">${pkg.title}</h3>
-        <div class="card-rating">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-          <strong>${pkg.rating}</strong>
-          <span>(${pkg.reviews} verified reviews)</span>
-        </div>
+        <p style="color: #64748b; font-size: 0.88rem; margin-bottom: 12px; font-weight: 600;">${pkg.duration}</p>
         <ul class="card-features-list">
-          ${pkg.highlights.slice(0, 3).map(h => `
+          ${pkg.highlights.map(h => `
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span>${h}</span>
@@ -409,12 +365,11 @@ function renderPackages(data) {
         </ul>
         <div class="card-footer">
           <div class="price-block">
-            <span class="price-old">₹${pkg.oldPrice.toLocaleString('en-IN')}</span>
-            <div class="price-current">₹${pkg.price.toLocaleString('en-IN')} <span class="price-unit">/ person</span></div>
+            <div class="price-current">${pkg.displayPrice || ('From ₹' + pkg.price + '/-')}</div>
           </div>
           <div class="card-actions">
-            <button class="btn btn-outline btn-sm" onclick="openItineraryModal('${pkg.id}')">Itinerary</button>
-            <button class="btn btn-primary btn-sm btn-shimmer" onclick="openBookingModal('${pkg.id}')">Book</button>
+            <button class="btn btn-outline btn-sm" onclick="openItineraryModal('${pkg.id}')">View Details →</button>
+            <button class="btn btn-primary btn-sm btn-shimmer" onclick="openBookingModal('${pkg.id}')">Enquire</button>
           </div>
         </div>
       </div>
@@ -432,14 +387,17 @@ function initCategoryFilter() {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      const cat = btn.getAttribute('data-filter');
+      const cat = (btn.getAttribute('data-filter') || '').toLowerCase();
 
-      if (cat === 'all') {
+      if (cat === 'all' || !cat) {
         renderPackages(packagesData);
-      } else if (cat === 'honeymoon' || cat === 'adventure') {
-        renderPackages(packagesData.filter(p => p.theme === cat));
       } else {
-        renderPackages(packagesData.filter(p => p.category === cat));
+        renderPackages(packagesData.filter(p => 
+          (p.category && p.category.toLowerCase() === cat) || 
+          (p.theme && p.theme.toLowerCase() === cat) || 
+          (p.destination && p.destination.toLowerCase() === cat) ||
+          (p.tags && p.tags.some(t => t.toLowerCase() === cat))
+        ));
       }
     });
   });

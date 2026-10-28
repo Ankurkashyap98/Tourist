@@ -100,7 +100,7 @@
 
 /* Logo */
 .brand-logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   font-family: var(--font-heading);
@@ -108,6 +108,52 @@
   font-weight: 800;
   color: var(--primary);
   letter-spacing: -0.02em;
+  text-decoration: none;
+  transition: transform var(--transition-spring), opacity 0.2s ease;
+}
+
+.brand-logo:hover {
+  transform: translateY(-1px);
+}
+
+.brand-logo-img {
+  height: 44px;
+  width: auto;
+  max-width: 240px;
+  object-fit: contain;
+  display: block;
+  transition: transform var(--transition-spring), filter 0.2s ease;
+}
+
+.brand-logo:hover .brand-logo-img {
+  transform: scale(1.02);
+}
+
+.footer-logo-img {
+  height: 48px;
+  width: auto;
+  max-width: 250px;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .brand-logo-img {
+    height: 38px;
+    max-width: 195px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-logo-img {
+    height: 34px;
+    max-width: 170px;
+  }
+
+  .footer-logo-img {
+    height: 40px;
+    max-width: 200px;
+  }
 }
 
 .brand-icon {
@@ -141,6 +187,7 @@
   display: flex;
   align-items: center;
   gap: 32px;
+  white-space: nowrap;
 }
 
 .nav-link {
@@ -469,7 +516,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: 
+  background-image:
     radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px),
     radial-gradient(rgba(255, 142, 38, 0.06) 1.2px, transparent 1.2px);
   background-size: 36px 36px, 72px 72px;
@@ -1201,46 +1248,124 @@
 }
 
 /* --------------------------------------------------------------------------
-   Live Recent Bookings Marquee Ticker
+   Live Contact & Address Marquee Ticker
    -------------------------------------------------------------------------- */
 .live-ticker-bar {
-  background: #ffffff;
-  border-bottom: 1px solid var(--border-subtle);
-  padding: 45px 0;
+  background: #09121d;
+  background: linear-gradient(90deg, #060e19 0%, #0b192c 50%, #060e19 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   overflow: hidden;
-  box-shadow: var(--shadow-xs);
+  padding: 8px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  position: relative;
+  z-index: 40;
 }
 
 .ticker-track {
   display: flex;
   align-items: center;
-  gap: 40px;
   white-space: nowrap;
-  animation: marqueeScroll 32s linear infinite;
+  animation: marqueeScroll 28s linear infinite;
   width: max-content;
+  user-select: none;
 }
 
 .ticker-track:hover {
   animation-play-state: paused;
 }
 
+.ticker-group {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding-right: 32px;
+  flex-shrink: 0;
+}
+
 .ticker-item {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-size: 23px;
-  color: var(--text-main);
-  font-weight: 600;
+  gap: 9px;
+  font-size: 0.84rem;
+  color: #cbd5e1;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.ticker-item a {
+  color: #f1f5f9;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: color var(--transition-fast, 0.2s);
+}
+
+.ticker-item a:hover {
+  color: var(--accent, #ff8e26);
 }
 
 .ticker-tag {
-  background: rgba(6, 214, 160, 0.15);
-  color: #059669;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   padding: 3px 8px;
   border-radius: 4px;
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 800;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.ticker-tag-call {
+  background: rgba(6, 214, 160, 0.18);
+  color: #06d6a0;
+  border: 1px solid rgba(6, 214, 160, 0.3);
+}
+
+.ticker-tag-address {
+  background: rgba(255, 142, 38, 0.18);
+  color: #ff9f43;
+  border: 1px solid rgba(255, 142, 38, 0.3);
+}
+
+.ticker-tag-whatsapp {
+  background: rgba(37, 211, 102, 0.18);
+  color: #25d366;
+  border: 1px solid rgba(37, 211, 102, 0.3);
+}
+
+.ticker-tag-location {
+  background: rgba(14, 165, 233, 0.18);
+  color: #38bdf8;
+  border: 1px solid rgba(14, 165, 233, 0.3);
+}
+
+.ticker-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.ticker-divider {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .live-ticker-bar {
+    padding: 6px 0;
+  }
+
+  .ticker-item {
+    font-size: 0.78rem;
+  }
+
+  .ticker-group {
+    gap: 24px;
+    padding-right: 24px;
+  }
 }
 
 /* --------------------------------------------------------------------------

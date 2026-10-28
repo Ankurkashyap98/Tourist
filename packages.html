@@ -9,8 +9,10 @@
   <meta name="description"
     content="Browse handcrafted holiday packages across Kashmir, Ladakh, Himachal, Kerala, Rajasthan, Goa, Dubai & Bali. Handpicked 4★ stays, verified mountain chauffeurs, and 24x7 Jammu concierge.">
 
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%230b192c'/><path d='M50 15 L78 75 L50 62 L22 75 Z' fill='%23ff8e26'/></svg>">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
 
   <base href="/">
   <script>
@@ -368,54 +370,34 @@
   <!-- Sticky Main Header (Single Unified Header) -->
   <header class="site-header">
     <div class="container header-inner">
+      <!-- Brand Logo -->
       <a href="/" class="brand-logo" aria-label="Trip Departure Home">
-        <div class="brand-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
-          </svg>
-        </div>
-        <div class="brand-text">Trip<span>Departure</span></div>
+        <img src="assets/images/logo.png" alt="Trip Departure" class="brand-logo-img" width="220" height="38">
       </a>
 
       <!-- Desktop Nav Menu with Clean Routing -->
       <nav class="nav-menu" aria-label="Primary Navigation">
         <a href="/" class="nav-link">Home</a>
+        <a href="/india-tour-packages" class="nav-link">India Packages</a>
+        <a href="/honeymoon-packages" class="nav-link">Honeymoon</a>
+        <a href="/international-tour-packages" class="nav-link">International</a>
+        <a href="/north-india-tour-packages" class="nav-link">North India</a>
 
         <div class="has-dropdown">
           <a href="/packages" class="nav-link dropdown-toggle active">
-            Domestic Tours
+            Tours &amp; Themes
             <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </a>
           <div class="nav-dropdown">
-            <a href="/packages?dest=kashmir" class="dropdown-item">
-              <span>Kashmir Packages</span>
-              <span class="dropdown-item-badge">Hot</span>
-            </a>
-            <a href="/packages?dest=ladakh" class="dropdown-item">Ladakh Adventure</a>
-            <a href="/packages?dest=himachal" class="dropdown-item">Himachal (Manali/Shimla)</a>
-            <a href="/packages?dest=kerala" class="dropdown-item">Kerala Backwaters</a>
-            <a href="/packages?dest=rajasthan" class="dropdown-item">Royal Rajasthan</a>
-            <a href="/packages?dest=goa" class="dropdown-item">Goa Beach Holidays</a>
+            <a href="/group-tour-packages" class="dropdown-item">Group Tour Packages</a>
+            <a href="/solo-trip-packages" class="dropdown-item">Solo Trip Packages</a>
+            <a href="/kerala-tour-packages" class="dropdown-item">Kerala Tour Packages</a>
+            <a href="/packages" class="dropdown-item">All Holiday Packages</a>
           </div>
         </div>
-        <!-- 
-        <div class="has-dropdown">
-          <a href="/packages?type=international" class="nav-link dropdown-toggle">
-            International
-            <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </a>
-          <div class="nav-dropdown">
-            <a href="/packages?dest=dubai" class="dropdown-item">Dubai &amp; Desert Safari</a>
-            <a href="/packages?dest=bali" class="dropdown-item">Bali Romantic Escapes</a>
-            <a href="/packages?dest=thailand" class="dropdown-item">Thailand &amp; Phuket</a>
-            <a href="/packages?dest=maldives" class="dropdown-item">Maldives Overwater Luxury</a>
-          </div>
-        </div> -->
 
-        <!-- <a href="/packages" class="nav-link active">All Packages</a> -->
         <a href="/about" class="nav-link">About Us</a>
         <a href="/contact" class="nav-link">Contact</a>
       </nav>
@@ -1084,15 +1066,9 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <div class="brand-logo" style="margin-bottom: 20px; color: #ffffff;">
-            <div class="brand-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
-              </svg>
-            </div>
-            <div class="brand-text">Trip<span style="color: var(--accent);">Departure</span></div>
-          </div>
+          <a href="/" class="brand-logo footer-logo" aria-label="Trip Departure Home" style="margin-bottom: 20px; display: inline-block;">
+            <img src="assets/images/logo-white.png" alt="Trip Departure" class="brand-logo-img footer-logo-img" width="230" height="40">
+          </a>
           <p style="color: #94a3b8; font-size: 0.94rem; line-height: 1.7;">
             Jammu’s premier boutique travel agency specializing in handcrafted domestic and international vacations with
             verified hotels, seasoned mountain chauffeurs, and 24x7 personal concierge service.
