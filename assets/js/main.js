@@ -471,7 +471,7 @@ function openItineraryModal(packageId) {
             <div style="font-size: 1.8rem; font-weight: 800; color: var(--primary);">₹${pkg.price.toLocaleString('en-IN')} <span style="font-size: 0.9rem; font-weight: 500; color: var(--text-muted);">/ person</span></div>
           </div>
           <div style="display: flex; gap: 10px;">
-            <a href="https://wa.me/918899544803?text=Hi%20Trip%20Departure,%20I%20am%20interested%20in%20${encodeURIComponent(pkg.title)}" target="_blank" class="btn btn-sm" style="background: #25d366; color: white;">
+            <a href="https://wa.me/917006341013?text=Hi%20Trip%20Departure,%20I%20am%20interested%20in%20${encodeURIComponent(pkg.title)}" target="_blank" class="btn btn-sm" style="background: #25d366; color: white;">
               WhatsApp Query
             </a>
             <button class="btn btn-primary btn-sm" onclick="openBookingModal('${pkg.id}')">Book Online</button>
